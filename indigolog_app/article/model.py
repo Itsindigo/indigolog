@@ -1,5 +1,7 @@
-from indigolog_app.indigolog import db
+from flask_sqlalchemy import SQLAlchemy
 import datetime
+
+db = SQLAlchemy()
 
 
 class Article(db.Model):
