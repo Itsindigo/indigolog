@@ -6,7 +6,6 @@ from flask_sqlalchemy import SQLAlchemy
 from config import config
 
 # Flask Extensions
-
 db = SQLAlchemy()
 
 # Import models so that they are registered with SQLAlchemy

@@ -1,5 +1,5 @@
 from flask import Flask, Blueprint
-from flask_sqlalchemy import SQLAlchemy
+
 # from indigolog_app.article.views import article_blueprint
 
 home = Blueprint('main', __name__)
