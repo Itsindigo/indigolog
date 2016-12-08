@@ -12,7 +12,7 @@ db = SQLAlchemy()
 from indigolog_app.article import model
 
 
-def create_app(config_name=None, main=True):
+def create_app(config_name=None):
     if config_name is None:
         config_name = os.environ.get('INDIGOLOG_CONFIG', 'development')
 
@@ -23,7 +23,8 @@ def create_app(config_name=None, main=True):
 
     # Register web application routes
     from .indigolog import home as home_blueprint
-    # from indigolog_app.article.views import article
+    from indigolog_app.article.views import article_blueprint
     indigolog.register_blueprint(home_blueprint)
+    indigolog.register_blueprint(article_blueprint)
 
     return indigolog
