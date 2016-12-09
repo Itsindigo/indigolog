@@ -10,9 +10,8 @@ class Article(db.Model):
     title = db.Column(db.String(120), unique=True)
     created_at = db.Column(db.DateTime(timezone=True), default=datetime.datetime.now())
 
-    def __init__(self, title, created_at):
+    def __init__(self, title):
         self.title = title
-        self.created_at = created_at
 
     def __repr__(self):
         return '<Title %r>' % self.title
